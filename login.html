@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inloggen</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Inloggen</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">Gebruikersnaam</label>
+                    <input type="text" id="username" name="username" placeholder="Voer je gebruikersnaam in" required>
+                    <div class="error-message" id="username-error">Vul een gebruikersnaam in</div>
+                </div>
+                <div class="input-group">
+                    <label for="password">Wachtwoord</label>
+                    <input type="password" id="password" name="password" placeholder="Voer je wachtwoord in" required>
+                    <div class="error-message" id="password-error">Vul een wachtwoord in</div>
+                </div>
+                <button type="submit" class="btn">Inloggen</button>
+                <p>Geen account? <a href="register.html">Registreer hier</a></p>
+                <div class="success-message" id="login-success">Inloggen succesvol!</div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
