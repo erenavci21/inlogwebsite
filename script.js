@@ -28,7 +28,16 @@ function validateLogin(event) {
     }
 
     if (valid) {
-        document.getElementById('login-success').style.display = 'block';
+        // Check credentials with stored values
+        const storedUsername = localStorage.getItem('username');
+        const storedPassword = localStorage.getItem('password');
+
+        if (username === storedUsername && password === storedPassword) {
+            document.getElementById('login-success').style.display = 'block';
+            localStorage.setItem('loggedIn', true); // Set login status
+        } else {
+            alert("Inloggen mislukt. Controleer je gegevens.");
+        }
     }
 }
 
@@ -70,6 +79,10 @@ function validateRegister(event) {
     }
 
     if (valid) {
+        // Store user details in localStorage
+        localStorage.setItem('username', username);
+        localStorage.setItem('email', email);
+        localStorage.setItem('password', password);
         document.getElementById('register-success').style.display = 'block';
     }
 }
